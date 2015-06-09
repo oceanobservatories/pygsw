@@ -22,8 +22,6 @@ ct_from_t = np.vectorize(lambda sa,t,p : gsw.ct_from_t(sa,t,p))
 
 deltasa_from_sp = np.vectorize(lambda sp,p,lon,lat: gsw.deltasa_from_sp(sp,p,lon,lat))
 
-delta_sa_ref = np.vectorize(lambda p,lon,lat : gsw.delta_sa_ref(p,lon,lat))
-
 dynamic_enthalpy = np.vectorize(lambda sa,ct,p : gsw.dynamic_enthalpy(sa,ct,p))
 
 enthalpy = np.vectorize(lambda sa,ct,p : gsw.enthalpy(sa,ct,p))
@@ -33,8 +31,6 @@ enthalpy_t_exact = np.vectorize(lambda sa,t,p : gsw.enthalpy_t_exact(sa,t,p))
 entropy_part = np.vectorize(lambda sa,t,p : gsw.entropy_part(sa,t,p))
 
 entropy_part_zerop = np.vectorize(lambda sa,pt0 : gsw.entropy_part_zerop(sa,pt0))
-
-entropy_t_exact = np.vectorize(lambda sa,t,p : gsw.entropy_t_exact(sa,t,p))
 
 fdelta = np.vectorize(lambda p,lon,lat : gsw.fdelta(p,lon,lat))
 

@@ -13,7 +13,6 @@ from seawater import pt0_from_t
 from seawater import sp_from_sr
 from seawater import specvol
 from seawater import sound_speed
-from seawater import delta_sa_ref
 from seawater import sa_from_sp
 from seawater import entropy_part
 from seawater import gibbs_pt0_pt0
@@ -43,7 +42,6 @@ from seawater import t_from_ct
 from seawater import pt_from_t
 from seawater import ct_from_t
 from seawater import deltasa_from_sp
-from seawater import entropy_t_exact
 from seawater import enthalpy
 from seawater import t_freezing
 from seawater import entropy_part_zerop

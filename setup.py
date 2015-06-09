@@ -28,8 +28,8 @@ Topic :: Scientific/Engineering
 Topic :: Education
 Topic :: Software Development :: Libraries :: Python Modules'''
 setup(name = 'pygsw', 
-        version='0.0.9',
-        description='Python bindings for the TEOS-10 V3.0 GSW Oceanographic Toolbox in C',
+        version='0.0.11',
+        description='Python bindings for the TEOS-10 V3.0.3 GSW Oceanographic Toolbox in C',
         long_description=open('README.txt').read(),
         license='LICENSE.txt',
         author='Luke Campbell',

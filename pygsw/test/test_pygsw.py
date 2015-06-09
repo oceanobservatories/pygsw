@@ -147,7 +147,6 @@ const = {
     'beta_const_ct_t_exact_ca':  1.847372081698051e-015,
     'beta_const_pt_t_exact_ca':  1.805738718274608e-015,
     'beta_const_t_exact_ca':  1.804871356536619e-015,
-    'entropy_t_exact_ca':  9.028163105995191e-009,
     'internal_energy_t_exact_ca':  2.499335096217692e-006,
     'enthalpy_t_exact_ca':  2.499349648132920e-006,
     'dynamic_enthalpy_t_exact_ca':  2.288943505845964e-007,
@@ -167,7 +166,6 @@ const = {
     'sa_from_rho_t_exact_ca':  1.304769625676272e-010,
     't_from_rho_exact_ca':  6.032974120273593e-010,
     'fdelta_ca':  2.702939055302528e-014,
-    'delta_sa_ref_ca':  6.945514042372425e-013,
 }
 
 class Constants(object):
@@ -239,9 +237,7 @@ class PyGSWTest(unittest.TestCase):
         self.assertTrue( self.validate("gswv.sound_speed_t_exact", C.sound_speed_t_exact_ca, gswv.sound_speed_t_exact(sa,t,p), 1512.2053940303056e0))
         self.assertTrue( self.validate("gswv.kappa_t_exact", C.kappa_t_exact_ca, gswv.kappa_t_exact(sa,t,p), 4.25506953386609075e-010))
         self.assertTrue( self.validate("gswv.enthalpy_t_exact", C.enthalpy_t_exact_ca, gswv.enthalpy_t_exact(sa,t,p), 62520.680485510929e0))
-        self.assertTrue( self.validate("gswv.entropy_t_exact", C.entropy_t_exact_ca, gswv.entropy_t_exact(sa,t,p), 212.30166821093002e0))
         self.assertTrue( self.validate("gswv.cp_t_exact", C.cp_t_exact_ca, gswv.cp_t_exact(sa,t,p), 3982.7832563441461e0))
-        self.assertTrue( self.validate("gswv.delta_sa_ref", C.delta_sa_ref_ca, gswv.delta_sa_ref(p,lon,lat), 3.87660373016291727e-3))
         self.assertTrue( self.validate("gswv.fdelta", C.fdelta_ca, gswv.fdelta(p,lon,lat), 1.49916256924158942e-004))
         self.assertTrue( self.validate("gswv.sa_from_sp_baltic", C.sa_from_sp_ca, gswv.sa_from_sp_baltic(sp,long_bs,lat_bs) , 35.666154857142850e0))
         self.assertTrue( self.validate("gswv.sp_from_sa_baltic", C.sp_from_sa_ca, gswv.sp_from_sa_baltic(sa,long_bs,lat_bs), 35.533769845749660e0))
@@ -286,9 +282,7 @@ class PyGSWTest(unittest.TestCase):
         self.assertTrue( self.validate("gsw.sound_speed_t_exact", C.sound_speed_t_exact_ca, gsw.sound_speed_t_exact(sa,t,p), 1512.2053940303056e0))
         self.assertTrue( self.validate("gsw.kappa_t_exact", C.kappa_t_exact_ca, gsw.kappa_t_exact(sa,t,p), 4.25506953386609075e-010))
         self.assertTrue( self.validate("gsw.enthalpy_t_exact", C.enthalpy_t_exact_ca, gsw.enthalpy_t_exact(sa,t,p), 62520.680485510929e0))
-        self.assertTrue( self.validate("gsw.entropy_t_exact", C.entropy_t_exact_ca, gsw.entropy_t_exact(sa,t,p), 212.30166821093002e0))
         self.assertTrue( self.validate("gsw.cp_t_exact", C.cp_t_exact_ca, gsw.cp_t_exact(sa,t,p), 3982.7832563441461e0))
-        self.assertTrue( self.validate("gsw.delta_sa_ref", C.delta_sa_ref_ca, gsw.delta_sa_ref(p,lon,lat), 3.87660373016291727e-3))
         self.assertTrue( self.validate("gsw.fdelta", C.fdelta_ca, gsw.fdelta(p,lon,lat), 1.49916256924158942e-004))
         self.assertTrue( self.validate("gsw.sa_from_sp_baltic", C.sa_from_sp_ca, gsw.sa_from_sp_baltic(sp,long_bs,lat_bs) , 35.666154857142850e0))
         self.assertTrue( self.validate("gsw.sp_from_sa_baltic", C.sp_from_sa_ca, gsw.sp_from_sa_baltic(sa,long_bs,lat_bs), 35.533769845749660e0))

@@ -1,7 +1,7 @@
 PyGSW
 ===
 
-Python bindings for the TEOS-10 V3.0 GSW Oceanographic Toolbox in C
+Python bindings for the TEOS-10 V3.0.3 GSW Oceanographic Toolbox in C
 
 Author
 ---
@@ -11,7 +11,7 @@ Luke Campbell &lt;luke.s.campbell@gmail.com&gt;
 Copying
 -----------
 
-**pygsw** - Python bindings for the TEOS-10 V3.0 GSW Oceanographic Toolbox in C
+**pygsw** - Python bindings for the TEOS-10 V3.0.3 GSW Oceanographic Toolbox in C
 
 Copyright 2012 Lucas Campbell
 

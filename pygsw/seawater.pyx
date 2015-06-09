@@ -22,13 +22,11 @@ cdef extern from "gswteos-10.h":
      double gsw_ct_from_pt(double sa, double pt)
      double gsw_ct_from_t(double sa, double t, double p)
      double gsw_deltasa_from_sp(double sp, double p, double lon, double lat)
-     double gsw_delta_sa_ref(double p, double lon, double lat)
      double gsw_dynamic_enthalpy(double sa, double ct, double p)
      double gsw_enthalpy(double sa, double ct, double p)
      double gsw_enthalpy_t_exact(double sa, double t, double p)
      double gsw_entropy_part(double sa, double t, double p)
      double gsw_entropy_part_zerop(double sa, double pt0)
-     double gsw_entropy_t_exact(double sa, double t, double p)
      double gsw_fdelta(double p, double lon, double lat)
      double gsw_gibbs(int ns, int nt, int np, double sa, double t, double p)
      double gsw_gibbs_pt0_pt0(double sa, double pt0)
@@ -215,21 +213,6 @@ def deltasa_from_sp(double sp, double p, double lon, double lat):
 
 @cython.boundscheck(False)
 @cython.wraparound(False)
-def delta_sa_ref(double p, double lon, double lat):
-    '''
-def delta_sa_ref(double p, double lon, double lat):
-    ! Calculates the Absolute Salinity Anomaly reference value, delta_SA_ref.
-    !
-    ! p      : sea pressure                                    [dbar]
-    ! lon   : longiture                                       [deg E]     
-    ! lat    : latitude                                        [deg N]
-    !
-    ! gsw_delta_sa_ref : Absolute Salinity Anomaly reference value    [g/kg]
-    '''    
-    return gsw_delta_sa_ref(p,lon,lat)
-
-@cython.boundscheck(False)
-@cython.wraparound(False)
 def dynamic_enthalpy(double sa, double ct, double p):
     '''
 def dynamic_enthalpy(double sa, double ct, double p):
@@ -305,21 +288,6 @@ def entropy_part_zerop(double sa, double pt0):
     ! gsw_entropy_part_zerop : entropy part at the sea surface
     '''    
     return gsw_entropy_part_zerop(sa,pt0)
-
-@cython.boundscheck(False)
-@cython.wraparound(False)
-def entropy_t_exact(double sa, double t, double p):
-    '''
-def entropy_t_exact(double sa, double t, double p):
-    ! Calculates the specific entropy of seawater
-    !
-    ! sa     : Absolute Salinity                               [g/kg]
-    ! t      : in-situ temperature                             [deg C]
-    ! p      : sea pressure                                    [dbar]
-    ! 
-    ! gsw_entropy_t_exact : specific entropy                   [J/(kg K)]
-    '''    
-    return gsw_entropy_t_exact(sa,t,p)
 
 @cython.boundscheck(False)
 @cython.wraparound(False)
